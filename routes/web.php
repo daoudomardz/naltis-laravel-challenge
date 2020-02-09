@@ -10,5 +10,10 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', 'VehicleController@index');
+Route::resource('vehicles', 'VehicleController');
+Route::get('/' , function () {
+    return redirect()->action('VehicleController@index');
+});
+// Route::get('/', function () {
+//     return view('home');
+// });

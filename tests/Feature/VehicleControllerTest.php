@@ -23,7 +23,7 @@ class VehicleControllerTest extends TestCase
         $car = factory(Car::class)->create();
         $truck = factory(Truck::class)->create();
         //When
-        $response = $this->get('/');
+        $response = $this->get('/vehicles');
         //Then
         $response->assertSeeText('Car');
         $response->assertSeeText('Truck');
